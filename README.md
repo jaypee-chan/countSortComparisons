@@ -1,2 +1,2 @@
 # countSortComparisons
-A C++ Program that counts the number of a sorting algorithms.
+A C++ Program that counts the number of sorting algorithms.
