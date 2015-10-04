@@ -13,6 +13,15 @@ void Sorter::initSort()
   this->_sort[4] = new Quick(_valList);
 }
 
+void Sorter::deleteSort()
+{
+  delete this->_sort[0];
+  delete this->_sort[1];
+  delete this->_sort[2];
+  delete this->_sort[3];
+  delete this->_sort[4];
+}
+
 void Sorter::launchBenchmark()
 {
   std::cout << _elems << " elements" << std::endl;

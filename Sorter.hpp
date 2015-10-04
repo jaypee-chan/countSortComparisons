@@ -21,6 +21,7 @@ public:
   void stockVector();
   void launchBenchmark();
   void initSort();
+  void deleteSort();
 
 private:
   bool isFloat(std::string str);
