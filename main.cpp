@@ -14,9 +14,9 @@ int main(int argc, char **argv)
     d.initSort();
     d.launchBenchmark();
   }
-  catch (char const *e)
+  catch (const std::exception &e)
   {
-    std::cerr << e;
+    std::cout << e.what() << std::endl;
     return (1);
   }
   return (0);

@@ -11,6 +11,7 @@
 #include "Bubble.hpp"
 #include "Merge.hpp"
 #include "Quick.hpp"
+#include "Exception.hpp"
 
 class Sorter
 {

@@ -1,4 +1,5 @@
-SRC	=		Selection.cpp \
+SRC	=	Exception.cpp \
+			Selection.cpp \
 			Insertion.cpp \
 			Bubble.cpp \
 			Merge.cpp \

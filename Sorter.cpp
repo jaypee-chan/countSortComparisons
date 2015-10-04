@@ -39,24 +39,17 @@ void Sorter::stockVector()
   float v;
 
   if (!(file) || file.eof())
-    throw ("Could not open the file.\n");
+    throw ExceptionFile("Could not open the file.");
   std::string tmp;
   while (file >> tmp)
   {
     ++this->_elems;
     if (tmp != "")
     {
-      try
-      {
-        if (isFloat(tmp) == false)
-          throw "Could not convert to float.\n";
-        v = atof(tmp.c_str());
-        this->_valList.push_back(v);
-      }
-      catch(std::exception& e)
-      {
-        throw "Could not convert to float.\n";
-      }
+      if (isFloat(tmp) == false)
+        throw ExceptionConvert("Could not convert to float.");
+      v = atof(tmp.c_str());
+      this->_valList.push_back(v);
     }
   }
 }
