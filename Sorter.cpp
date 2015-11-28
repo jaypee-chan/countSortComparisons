@@ -4,7 +4,8 @@ Sorter::Sorter(const char *filename) : _filename(filename), _elems(0)
 {
 }
 
-void Sorter::initSort()
+void
+Sorter::initSort()
 {
   this->_sort[0] = new Selection(_valList);
   this->_sort[1] = new Insertion(_valList);
@@ -13,7 +14,8 @@ void Sorter::initSort()
   this->_sort[4] = new Quick(_valList);
 }
 
-void Sorter::deleteSort()
+void
+Sorter::deleteSort()
 {
   delete this->_sort[0];
   delete this->_sort[1];
@@ -22,7 +24,8 @@ void Sorter::deleteSort()
   delete this->_sort[4];
 }
 
-void Sorter::launchBenchmark()
+void
+Sorter::launchBenchmark()
 {
   std::cout << _elems << " elements" << std::endl;
 
@@ -34,7 +37,8 @@ void Sorter::launchBenchmark()
   }
 }
 
-bool Sorter::isFloat(std::string str)
+bool
+Sorter::isFloat(std::string str)
 {
   std::istringstream iss(str);
   float f;
@@ -42,7 +46,8 @@ bool Sorter::isFloat(std::string str)
   return iss.eof() && !iss.fail();
 }
 
-void Sorter::stockVector()
+void
+Sorter::stockVector()
 {
   std::ifstream file(this->_filename.c_str());
   float v;

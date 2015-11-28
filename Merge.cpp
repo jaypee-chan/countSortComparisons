@@ -5,7 +5,8 @@ Merge::Merge(std::vector<float> vals) : ASorting(vals)
    this->_sortName = "Merge";
 }
 
-void Merge::sorting()
+void
+Merge::sorting()
 {
   std::vector<float> v = _value;
   _value = mergeSort(v);
@@ -13,7 +14,7 @@ void Merge::sorting()
 
 void
 Merge::merge(std::vector<float> &result,
-   std::vector<float> left, std::vector<float> right)
+  std::vector<float> left, std::vector<float> right)
 {
   int i = 0;
   int j = 0;
@@ -32,7 +33,8 @@ Merge::merge(std::vector<float> &result,
     result.push_back(right[j++]);
 }
 
-std::vector<float> Merge::mergeSort(std::vector<float> val)
+std::vector<float>
+Merge::mergeSort(std::vector<float> val)
 {
   std::vector<float> left;
   std::vector<float> right;

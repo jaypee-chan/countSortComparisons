@@ -9,8 +9,6 @@ public:
   Bubble(std::vector<float> vals);
   ~Bubble() {};
   void sorting();
-private:
-  void bSwap(int &val1, int &val2);
 };
 
 #endif

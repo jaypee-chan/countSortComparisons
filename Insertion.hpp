@@ -9,12 +9,6 @@ public:
   Insertion(std::vector<float> val);
   ~Insertion() {};
   void sorting();
-  inline void swap(float &a, float &b)
-  {
-    float c = a;
-    a = b;
-    b = c;
-  };
 };
 
 #endif

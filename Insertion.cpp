@@ -5,7 +5,8 @@ Insertion::Insertion(std::vector<float> vals) : ASorting(vals)
   this->_sortName = "Insertion";
 }
 
-void Insertion::sorting()
+void
+Insertion::sorting()
 {
   int j;
   float val;

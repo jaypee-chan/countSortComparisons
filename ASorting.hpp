@@ -17,7 +17,6 @@ public:
   void displayComparisons() const
   {
         std::cout << this->getSortName() << " sort : " << this->getComparison() << " comparisons." << std::endl;
-
   };
   unsigned int getComparison() const
   {
@@ -32,17 +31,9 @@ public:
     }
     std::cout << std::endl;
   };
-
 protected:
-  FILE *file;
   std::vector<float> _value;
   unsigned int _comparison;
-  inline void swap(float &a, float &b)
-  {
-    float c = a;
-    a = b;
-    b = c;
-  }
   std::string _sortName;
   std::string getSortName() const
   {

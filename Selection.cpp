@@ -5,7 +5,8 @@ Selection::Selection(std::vector<float> vals) : ASorting(vals)
   this->_sortName = "Selection";
 }
 
-void Selection::sorting()
+void
+Selection::sorting()
 {
   int j;
   int minPos;
@@ -21,6 +22,6 @@ void Selection::sorting()
         minPos = j;
     }
     if (minPos != i)
-      this->swap(_value[i], this->_value[minPos]);
+      std::swap(_value[i], this->_value[minPos]);
   }
 }
