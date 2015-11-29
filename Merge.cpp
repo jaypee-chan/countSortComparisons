@@ -45,7 +45,7 @@ Merge::mergeSort(std::vector<float> val)
    return val;
   for (int i = 0; i < middle; i++)
     left.push_back(val[i]);
-  for (int i = middle; i < (int)val.size(); i++)
+  for (int i = middle; i < val.size(); i++)
     right.push_back(val[i]);
   left = mergeSort(left);
   right = mergeSort(right);
