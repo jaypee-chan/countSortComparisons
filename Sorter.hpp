@@ -19,7 +19,7 @@ public:
   Sorter(const char *filename);
   ~Sorter() {};
   void stockVector();
-  void launchBenchmark();
+  void launchBenchmark() const;
   void initSort();
   void deleteSort();
 
@@ -29,7 +29,7 @@ private:
   std::string _filename;
   std::vector<float> _valList;
   unsigned int _elems;
-  ASorting *_sort[5];
+  std::vector<ASorting *> _sort;
 };
 
 #endif

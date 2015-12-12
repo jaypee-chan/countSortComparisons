@@ -7,33 +7,32 @@ Sorter::Sorter(const char *filename) : _filename(filename), _elems(0)
 void
 Sorter::initSort()
 {
-  this->_sort[0] = new Selection(_valList);
-  this->_sort[1] = new Insertion(_valList);
-  this->_sort[2] = new Bubble(_valList);
-  this->_sort[3] = new Merge(_valList);
-  this->_sort[4] = new Quick(_valList);
+  _sort.push_back(new Selection(_valList));
+  _sort.push_back(new Insertion(_valList));
+  _sort.push_back(new Bubble(_valList));
+  _sort.push_back(new Merge(_valList));
+  _sort.push_back(new Quick(_valList));
 }
 
 void
 Sorter::deleteSort()
 {
-  delete this->_sort[0];
-  delete this->_sort[1];
-  delete this->_sort[2];
-  delete this->_sort[3];
-  delete this->_sort[4];
+  std::size_t len = _sort.size();
+
+  for (std::size_t i = 0; i < len; ++i) {
+    _sort.erase(_sort.begin());
+  }
 }
 
 void
-Sorter::launchBenchmark()
+Sorter::launchBenchmark() const
 {
   std::cout << _elems << " elements" << std::endl;
 
-  for (size_t i = 0; i < 5; i++)
-  {
-    this->_sort[i]->sorting();
-    this->_sort[i]->displayComparisons();
-    this->_sort[i]->displaySort();
+  for (std::vector<ASorting *>::const_iterator it = _sort.begin(); it != _sort.end(); ++it) {
+    (*it)->sorting();
+    (*it)->displayComparisons();
+    (*it)->displaySort();
   }
 }
 
