@@ -17,10 +17,10 @@ Sorter::initSort()
 void
 Sorter::deleteSort()
 {
-  std::size_t len = _sort.size();
-
-  for (std::size_t i = 0; i < len; ++i) {
-    _sort.erase(_sort.begin());
+  for (std::vector<ASorting *>::iterator it = _sort.begin();
+                                         it != _sort.end();
+                                         ++it) {
+    delete *it;
   }
 }
 
@@ -29,7 +29,9 @@ Sorter::launchBenchmark() const
 {
   std::cout << _elems << " elements" << std::endl;
 
-  for (std::vector<ASorting *>::const_iterator it = _sort.begin(); it != _sort.end(); ++it) {
+  for (std::vector<ASorting *>::const_iterator it = _sort.begin();
+                                               it != _sort.end();
+                                               ++it) {
     (*it)->sorting();
     (*it)->displayComparisons();
     (*it)->displaySort();
