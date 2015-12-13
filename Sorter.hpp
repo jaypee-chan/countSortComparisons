@@ -17,11 +17,10 @@ class Sorter
 {
 public:
   Sorter(const char *filename);
-  ~Sorter() {};
+  ~Sorter();
   void stockVector();
   void launchBenchmark() const;
   void initSort();
-  void deleteSort();
 
 private:
   bool isFloat(std::string str);

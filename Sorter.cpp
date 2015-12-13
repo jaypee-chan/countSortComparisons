@@ -14,8 +14,7 @@ Sorter::initSort()
   _sort.push_back(new Quick(_valList));
 }
 
-void
-Sorter::deleteSort()
+Sorter::~Sorter()
 {
   for (std::vector<ASorting *>::iterator it = _sort.begin();
                                          it != _sort.end();

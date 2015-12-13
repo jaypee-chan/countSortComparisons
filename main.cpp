@@ -14,7 +14,6 @@ main(int argc, char **argv)
     d.stockVector();
     d.initSort();
     d.launchBenchmark();
-    d.deleteSort();
   }
   catch (const std::exception &e)
   {
